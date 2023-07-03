@@ -71,6 +71,9 @@ const server = app.listen(PORT,console.log(`server started on port : ${PORT}`));
 //       }
 //     })
 
+app.get("/", (req, res) => {
+      res.send("Hello I am Server");
+    });
 const io = require("socket.io")(server, {
   // pingTimeout: 60000,
   cors: {
